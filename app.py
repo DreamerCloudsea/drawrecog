@@ -23,9 +23,9 @@ def encode_image_to_base64(image_path):
         return None
 
 # ================= CONFIG UI =================
-st.set_page_config(page_title='Tablero Inteligente', layout="wide")
+st.set_page_config(page_title='Tablero de Dibujo', layout="wide")
 
-st.title('🧠 Tablero Inteligente')
+st.title('🎨🖌️ Tablero de dibujo')
 
 st.image(
     "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Drawing_of_a_drawing.JPG/960px-Drawing_of_a_drawing.JPG",
