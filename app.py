@@ -38,7 +38,13 @@ st.subheader("Dibuja un boceto y presiona el botón para analizarlo")
 # ================= SIDEBAR =================
 st.sidebar.title("⚙️ Configuración")
 
-stroke_width = st.sidebar.slider('Ancho de línea', 1, 30, 5)
+stroke_width = st.sidebar.slider('Ancho de línea', 1, 30, 15)
+stroke_color = st.sidebar.color_picker('Color del lápiz', '#FFFFFF')
+
+drawing_mode = st.sidebar.selectbox(
+    "Modo de dibujo",
+    ("freedraw", "line", "rect", "circle")
+)
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("🔑 API Key")
@@ -87,7 +93,7 @@ if canvas_result.image_data is not None and api_key and analyze_button:
         try:
             message_placeholder = st.empty()
 
-            response = openai.chat.completions.create(
+            response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
                     {
