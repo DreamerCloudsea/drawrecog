@@ -28,7 +28,7 @@ st.set_page_config(page_title='Tablero Inteligente', layout="wide")
 st.title('🧠 Tablero Inteligente')
 
 st.image(
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sketch_example.png/640px-Sketch_example.png",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Drawing_of_a_drawing.JPG/960px-Drawing_of_a_drawing.JPG",
     caption="Ejemplo de boceto",
     width=600
 )
